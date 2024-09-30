@@ -1,0 +1,110 @@
+/* Reset básico para remover margens e paddings padrões */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Corpo da página */
+body {
+    background-color: #1D4221; /* Cor de fundo */
+    color: #FFFFFF; /* Cor do texto */
+    font-family: "Bai Jamjuree", sans-serif; /* Fonte principal */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Usar 100% da altura da viewport */
+    margin: 0;
+    padding: 20px; /* Um pouco de espaço ao redor em telas pequenas */
+    text-align: center; /* Centraliza o texto */
+    transition: background-color 0.3s ease; /* Animação suave ao mudar o fundo */
+}
+
+/* Estilo do botão */
+button {
+    background-color: #64A712;
+    color: #FFFFFF;
+    font-family: inherit; /* Herda a fonte do body */
+    font-size: 1.2rem;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease; /* Animação suave ao passar o mouse */
+}
+
+button:hover {
+    background-color: #76C714; /* Mudança de cor ao hover */
+    transform: scale(1.05); /* Leve zoom ao passar o mouse */
+}
+
+button:active {
+    background-color: #5A930F; /* Cor mais escura ao clicar */
+}
+
+/* Passos ocultos por padrão */
+.passo {
+    display: none;
+}
+
+/* Passo ativo visível */
+.passo.ativo {
+    display: block;
+}
+
+/* Container principal */
+main {
+    max-width: 90%; /* Controla a largura máxima */
+    padding: 20px;
+    border-radius: 10px;
+    background-color: rgba(0, 0, 0, 0.2); /* Fundo semi-transparente para destaque */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5); /* Sombra para destacar o conteúdo */
+    transition: background-color 0.3s ease; /* Animação suave ao fundo do main */
+}
+
+/* Estilização de imagens */
+img {
+    max-width: 100%; /* Ajusta a imagem à largura do container */
+    height: auto; /* Mantém a proporção da imagem */
+    margin-top: 20px;
+    border-radius: 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transição suave para hover */
+}
+
+img:hover {
+    transform: scale(1.05); /* Efeito de zoom */
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3); /* Sombra ao passar o mouse */
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    body {
+        height: auto;
+        padding: 40px 20px;
+    }
+
+    button {
+        font-size: 1rem;
+        padding: 8px 16px;
+    }
+
+    img {
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    button {
+        font-size: 0.9rem;
+        padding: 8px 12px;
+    }
+
+    main {
+        padding: 10px;
+    }
+
+    img {
+        max-width: 100%;
+        border-radius: 5px;
+    }
+}
